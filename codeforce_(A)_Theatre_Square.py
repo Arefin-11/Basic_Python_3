@@ -24,5 +24,5 @@ elif n > a and m > a:
     if q > 0:
         f += 1
     count = e*f
-print(str(count))
+print(count)
 
