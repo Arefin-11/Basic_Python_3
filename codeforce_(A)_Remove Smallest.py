@@ -6,27 +6,30 @@ for i in range(t):
     a.append(input())
 
 for test in a:
+    Test=[]
     test=test.split()
-    s=test[0]
-    for i in test:
+    for i in range(len(test)):
+        Test.append(int(test[i]))
+    Test.sort()
+    #print(Test)
+    s=Test[0]
+    for i in Test:
         if i==s:
             continue
         else:
             s=None
             break
-    if s==test[0]:
+    if s==Test[0]:
         print("YES")
     else:
         u=0
-        for r in range(len(test)-1):
-            if abs(int(test[0])-int(test[-1]))<=1:
-                b=min(test[0],test[-1])
-                test.remove(b)
+        for r in range(len(Test)-1):
+            if abs(int(Test[0])-int(Test[1]))<=1:
+                b=min(Test[0],Test[1])
+                Test.remove(b)
             else:
                 print("No")
                 u=2
                 break
         if u!=2:
             print("YES")
-
-
